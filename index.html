@@ -106,6 +106,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
     <style>
         :root {
             --bg: #0F172A;
@@ -117,6 +119,7 @@
             --surface: rgba(255, 255, 255, 0.03);
             --border: rgba(148, 163, 184, 0.1);
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --container-padding: 20px;
         }
 
         * {
@@ -1566,6 +1569,137 @@
             .nav-link:hover,
             .button:hover {
                 opacity: 1;
+            }
+        }
+
+        /* Hero section mobile fixes */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 100vh;
+                padding: 120px var(--container-padding) 60px;
+                display: flex;
+                align-items: center;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 36px !important;
+                line-height: 1.2;
+                margin-bottom: 16px;
+            }
+
+            .hero p {
+                font-size: 16px !important;
+                line-height: 1.5;
+                margin-bottom: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                padding: 16px 24px;
+                font-size: 16px;
+            }
+
+            /* Navbar mobile fixes */
+            .navbar {
+                padding: 16px var(--container-padding);
+            }
+
+            .nav-logo {
+                font-size: 20px;
+            }
+
+            .nav-logo img {
+                height: 24px;
+            }
+
+            /* Announcement banner mobile */
+            .announcement {
+                padding: 8px var(--container-padding);
+                font-size: 14px;
+            }
+
+            /* Coming soon badge */
+            .coming-soon {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            /* Mobile menu adjustments */
+            .mobile-menu-button {
+                padding: 8px;
+                margin-left: auto;
+            }
+
+            .nav-links.active {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                padding: 16px var(--container-padding);
+                border-top: 1px solid var(--border);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-buttons.active {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                padding: 16px var(--container-padding);
+                border-top: 1px solid var(--border);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 32px !important;
+            }
+
+            .hero p {
+                font-size: 15px !important;
+            }
+
+            .nav-logo {
+                font-size: 18px;
+            }
+
+            .nav-logo img {
+                height: 20px;
+            }
+        }
+
+        /* General responsive utilities */
+        .primary-button,
+        .secondary-button {
+            padding: 16px 24px;
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Fix for iOS Safari 100vh issue */
+        @supports (-webkit-touch-callout: none) {
+            .hero {
+                min-height: -webkit-fill-available;
             }
         }
     </style>
