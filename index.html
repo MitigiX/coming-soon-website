@@ -1738,6 +1738,110 @@
                     font-size: 14px;
                 }
             }
+
+            /* Mobile-specific content adjustments */
+            @media (max-width: 768px) {
+                /* Hero section */
+                .hero {
+                    padding: 80px 20px 40px;
+                }
+
+                .hero h1 {
+                    font-size: 28px !important;
+                    line-height: 1.2;
+                    margin-bottom: 12px;
+                }
+
+                .hero p {
+                    font-size: 14px !important;
+                    line-height: 1.5;
+                    margin-bottom: 24px;
+                    color: var(--text-secondary);
+                }
+
+                /* Features section */
+                .features {
+                    padding: 60px 20px;
+                }
+
+                .section-header h2 {
+                    font-size: 24px !important;
+                    margin-bottom: 12px;
+                }
+
+                .section-description {
+                    font-size: 14px !important;
+                    margin-bottom: 40px;
+                }
+
+                .feature-card {
+                    padding: 20px;
+                }
+
+                .feature-card h3 {
+                    font-size: 18px !important;
+                    margin-bottom: 8px;
+                }
+
+                .feature-card p {
+                    font-size: 14px !important;
+                    line-height: 1.4;
+                }
+
+                /* Buttons */
+                .primary-button,
+                .secondary-button {
+                    padding: 12px 20px;
+                    font-size: 14px;
+                }
+
+                /* Navigation */
+                .nav-logo {
+                    font-size: 18px;
+                }
+
+                .nav-link {
+                    font-size: 14px;
+                }
+
+                /* Announcement banner */
+                .announcement {
+                    padding: 6px 16px;
+                    font-size: 12px;
+                }
+
+                /* Coming soon badge */
+                .coming-soon {
+                    font-size: 12px;
+                    padding: 4px 10px;
+                }
+
+                /* Follow button */
+                .follow-button {
+                    padding: 8px 16px;
+                    font-size: 13px;
+                }
+            }
+
+            /* Extra small devices */
+            @media (max-width: 375px) {
+                .hero h1 {
+                    font-size: 24px !important;
+                }
+
+                .hero p {
+                    font-size: 13px !important;
+                }
+
+                section {
+                    padding: 40px 16px !important;
+                }
+
+                .feature-card,
+                .solution-card {
+                    padding: 20px;
+                }
+            }
         </style>
 
         <script>
